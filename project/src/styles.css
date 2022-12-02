@@ -51,5 +51,9 @@ h1 {
 }
 .heading {
   font-size: 18px;
-  font-weight: normal;
+  font-weight: lighter;
+}
+.readings {
+  position: relative;
+  top: 60px;
 }
