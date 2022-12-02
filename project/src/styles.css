@@ -1,0 +1,55 @@
+li {
+  list-style-type: none;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  margin: 0px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 100px;
+}
+
+.header {
+  font-size: 30px;
+  font-weight: bold;
+}
+.units {
+  position: relative;
+  top: -32px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.weather-app {
+  border: 1px solid #4069e0;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 2px 2px 2px 1px #4069e0;
+  background-color: radial-gradient(
+    circle at 7.5% 24%,
+    rgb(237, 161, 193) 0%,
+    rgb(250, 178, 172) 25.5%,
+    rgb(190, 228, 210) 62.3%,
+    rgb(215, 248, 247) 93.8%
+  );
+}
+.details {
+  font-size: 60px;
+  line-height: 20px;
+}
+.link {
+  text-decoration: dotted;
+}
+.weather-details {
+  position: relative;
+  left: 30px;
+  top: 50px;
+}
+.heading {
+  font-size: 18px;
+  font-weight: normal;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/89e10136c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <br />
+        <form id="search-form">
+          <div class="row">
+            <div class="col-5">
+              <input
+                type="search"
+                placeholder="change city"
+                class="form-control"
+                id="text-input"
+              />
+            </div>
+            <div class="col-2">
+              <input
+                type="submit"
+                value="search"
+                class="form-control btn btn-primary"
+              />
+            </div>
+            <button class="col-2 btn btn-danger">Current📌</button>
+          </div>
+        </form>
+        <div class="row weather-details">
+          <div class="col-4">
+            <div class="header">
+              <h1>Osaka,JP</h1>
+              <ul class="heading">
+                <li id="time">Friday 18:00</li>
+                <li id="description"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-4">
+            <ul>
+              <li>Precipitation 10%</li>
+              <li id="humidity"></li>
+              <li id="wind"></li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <span class="details">⛅️</span>
+            <span class="details" id="city-temp">19</span>
+            <span class="units">
+              <a href="#" class="link" id="link-1">°C </a>
+              |
+              <a href="#" class="link" id="link-2">°F</a>
+            </span>
+          </div>
+        </div>
+        <br />
+        <br />
+        <hr />
+        <br />
+        <div class="row">
+          <div class="col-sm box shadow-sm">
+            <ul>
+              <li>
+                <i class="fa-solid fa-cloud"></i>
+              </li>
+              <li>19° / 9°</li>
+              <li>Saturday</li>
+            </ul>
+          </div>
+          <div class="col-sm box shadow-sm">
+            <ul>
+              <li>
+                <i class="fa-solid fa-cloud-bolt"></i>
+              </li>
+              <li>16° / 12°</li>
+              <li>Sunday</li>
+            </ul>
+          </div>
+          <div class="col-sm box shadow-sm">
+            <ul>
+              <li>
+                <i class="fa-solid fa-cloud-sun"></i>
+              </li>
+              <li>20° / 13°</li>
+              <li>Monday</li>
+            </ul>
+          </div>
+          <div class="col-sm box shadow-sm">
+            <ul>
+              <li>
+                <i class="fa-solid fa-sun"></i>
+              </li>
+              <li>19° / 13°</li>
+              <li>Tuesday</li>
+            </ul>
+          </div>
+          <div class="col-sm box shadow-sm">
+            <ul>
+              <li>
+                <i class="fa-solid fa-cloud-showers-heavy"></i>
+              </li>
+              <li>18° / 13°</li>
+              <li>Wednesday</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
