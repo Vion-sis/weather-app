@@ -61,6 +61,10 @@ function showTempForCityValue(response) {
   let desc = response.data.weather[0].description;
   let WeatherDesc = document.querySelector("#description");
   WeatherDesc.innerHTML = `${desc}`;
+
+  let name = response.data.name;
+  let cityDisplayName = document.querySelector("#name");
+  cityDisplayName.innerHTML = `${name}`;
 }
 
 function searchCity(event) {
@@ -69,7 +73,6 @@ function searchCity(event) {
   let units = "metric";
   let cityName = document.querySelector("#text-input").value;
   cityNameDisplay = document.querySelector("h1");
-  cityNameDisplay.innerHTML = `${cityName}`;
   let apiKey = "4091b06da263484df848822445999498";
   let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?";
   let apiUrl = `${apiEndPoint}q=${cityName}&appid=${apiKey}&units=${units}`;
@@ -97,6 +100,10 @@ function showTempForCurrentLocation(response) {
   let desc = response.data.weather[0].description;
   let WeatherDesc = document.querySelector("#description");
   WeatherDesc.innerHTML = `${desc}`;
+
+  let name = response.data.name;
+  let cityDisplayName = document.querySelector("#name");
+  cityDisplayName.innerHTML = `${name}`;
 }
 
 function showPosition(position) {
