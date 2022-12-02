@@ -43,8 +43,17 @@ function convertToCelcius(event) {
 let tempCelcius = document.querySelector("#link-1");
 tempCelcius.addEventListener("click", convertToCelcius);
 
+//show default city weather consitions
+
+function search(city) {
+  let units = "metric";
+  let apiKey = "4091b06da263484df848822445999498";
+  let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?";
+  let apiUrl = `${apiEndPoint}q=${city}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showWeatherForCityValue);
+}
 //show temperature for a searchCityValue//
-function showTempForCityValue(response) {
+function showWeatherForCityValue(response) {
   console.log(response.data);
   let currentCity = document.querySelector("#city-temp");
   let currentTemp = Math.round(response.data.main.temp);
@@ -70,13 +79,8 @@ function showTempForCityValue(response) {
 function searchCity(event) {
   event.preventDefault();
 
-  let units = "metric";
-  let cityName = document.querySelector("#text-input").value;
-  cityNameDisplay = document.querySelector("h1");
-  let apiKey = "4091b06da263484df848822445999498";
-  let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather?";
-  let apiUrl = `${apiEndPoint}q=${cityName}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showTempForCityValue);
+  let city = document.querySelector("#text-input").value;
+  search(city);
 }
 
 let form = document.querySelector("#search-form");
@@ -119,3 +123,5 @@ function showPosition(position) {
 }
 
 navigator.geolocation.getCurrentPosition(showPosition);
+
+search("New York");
