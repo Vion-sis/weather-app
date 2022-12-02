@@ -76,7 +76,7 @@ function showWeatherForCityValue(response) {
   cityDisplayName.innerHTML = `${name}`;
 }
 
-function searchCity(event) {
+function handleForm(event) {
   event.preventDefault();
 
   let city = document.querySelector("#text-input").value;
@@ -84,7 +84,7 @@ function searchCity(event) {
 }
 
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", searchCity);
+form.addEventListener("submit", handleForm);
 
 //show temperature for current button//
 function showTempForCurrentLocation(response) {
@@ -122,6 +122,12 @@ function showPosition(position) {
   axios.get(currentLocationApiUrl).then(showTempForCurrentLocation);
 }
 
-navigator.geolocation.getCurrentPosition(showPosition);
+function showCurrent(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let button = document.querySelector("#current-location-button");
+button.addEventListener("click", showCurrent);
 
 search("New York");
